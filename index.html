@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootsrap.min.css">
+</head>
+<body>
+
+<div class="container">
+<details ontoggle="message()">
+<summary>Instruction</summary>	
+<i> Enter two numbers then find its answer" </i>
+</details>
+
+<form>
+  <label>Enter 1st Number</label>	
+  <input type="number" id="num 1" placeholder="type here .. .."></input>
+
+<br>
+
+<label>Enter 2nd Number</label>	
+  <input type="number" id="num 2" placeholder="type here .. .."></input>
+
+<br>
+
+<button type="button" onclick="place()">Calculate</button>
+<button type="button" onclick="minus()">Minus</button>
+<span><h1 id="Result">RESULT</h1>.</span>
+
+
+
+</form>
+
+</div>
+
+<script>
+function message() {
+	alert("try it");
+}
+
+function place() {
+
+var add1= document.getElementById ("num 1").value
+var add2= document.getElementById ("num 2").value;
+var sum = Number(add1) + Number (add2);
+document.getElementById('Result').innerHTML= 'Answer is '+ ''+ sum;
+
+}
+
+function minus () {
+	var minus1= document.getElementById ("num 1").value
+var minus2= document.getElementById ("num 2").value;
+var ans = Number(minus1) - Number (minus2);
+document.getElementById('Result').innerHTML= 'Answer is '+ ''+ ans;
+
+}
+
+</script>
